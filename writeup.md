@@ -33,7 +33,6 @@ My pipeline consisted of many steps statring from indentfy HSL color selection a
     <li>Find the verage and the xtrapolating lane lines to create two smooth lines</li>
 </ul>
 
-
 First, I converted the original images to HSL and HSV images to find the white and yellow lane lines, then I converted the images to gray scale to be able to manipulate them for the next stage.
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by tunes the parameters that related to all the proces until hough algorthim. I modified draw_lines function accordingly and tried to re-running my pipeline many times until I got a good results. The new output draw a single, solid line over the left lane line and a single, solid line over the right lane line. The lines start from the bottom of the image and extend out to the top of the region of interest
