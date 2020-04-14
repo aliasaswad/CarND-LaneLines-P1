@@ -23,13 +23,14 @@ My pipeline consisted of many steps statring from indentfy HSL color selection a
     <li>Convert our original image to HSL</li>
     <li>Isolate yellow and white from HSL image</li>
     <li>Bit-wise OR yellow and white masks to get common mask</li>
-    <li>Bit-wise AND mask with darkened image</li>
+    <li>Bit-wise AND mask with original image</li>
     <li>Convert image to grayscale</li>
     <li>Apply Gaussian Blur to smoothen edges</li>
     <li>Apply Canny Edge Detection on smoothed gray image</li>
-    <li>Perform a Hough Transform to find lanes and trace them in red</li>
+    <li>Performe Region Of Interest to remove extra data outside our poly. mask(ROI)</li>
+    <li>Perform a Hough Transform to find lanes</li>
     <li>Separate left and right lanes</li>
-    <li>Extrapolate them to create two smooth lines</li>
+    <li>Find the verage and the xtrapolating lane lines to create two smooth lines</li>
 </ul>
 
 
