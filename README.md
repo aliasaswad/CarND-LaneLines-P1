@@ -10,47 +10,85 @@ When we drive, we use our eyes to decide where to go.  The lines on the road tha
 
 In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
 
-To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md 
+## Reflection
 
-To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
+### 1. Project Pipeline
+
+My pipeline consisted of many steps statring from indentfy HSL color selection and end with ? as below:
+
+<ul>
+    <li>Convert our original image to HSL</li>
+    <li>Isolate yellow and white from HSL image</li>
+    <li>Bit-wise OR yellow and white masks to get common mask</li>
+    <li>Bit-wise AND mask with darkened image</li>
+    <li>Convert image to grayscale</li>
+    <li>Apply Gaussian Blur to smoothen edges</li>
+    <li>Apply Canny Edge Detection on smoothed gray image</li>
+    <li>Perform a Hough Transform to find lanes and trace them in red</li>
+    <li>Separate left and right lanes</li>
+    <li>Extrapolate them to create two smooth lines</li>
+</ul>
 
 
+First, I converted the original images to HSL and HSV images to find the white and yellow lane lines, then I converted the images to gray scale to be able to manipulate them for the next stage.
+
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by tunes the parameters that related to all the proces until hough algorthim. I modified draw_lines function accordingly and tried to re-running my pipeline many times until I got a good results. The new output draw a single, solid line over the left lane line and a single, solid line over the right lane line. The lines start from the bottom of the image and extend out to the top of the region of interest
+
+Below you could see how my pipeline manupilated the images from start to end;
+
+<img src="project1_pipeline_images_examples/HSL.png" width="380" alt="Combined Image" align="middle" >
+<!-- <img src="project1_pipeline_images_examples/HSV.png" width="380" alt="Combined Image" align="middle" > -->
+<img src="project1_pipeline_images_examples/gray.png" width="380" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/gaussian.png" width="380" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/canny.png" width="380" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/roi.png" width="380" alt="Combined Image" align="middle" > -->
+<img src="project1_pipeline_images_examples/hough.png" width="380" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/average.png" width="380" alt="Combined Image" align="middle" >
+
+<!-- <img src="project1_pipeline_images_examples/origin.png" width="380" alt="Combined Image" align="middle" > -->
+
+
+<!-- ![alt text][image1] -->
+
+
+### 2. Potential shortcomings with the current pipeline
+
+
+One potential shortcoming would be what would happen when video exposed a couple flaws with my pipeline. this challenge requires hard coded regions, highly sensitive to color, and highly dependent on lane location.
+
+Another shortcoming could be dealing with the parameter in all to adjected the color selection for the image.
+
+
+### 3. Possible improvements to the pipeline
+
+A possible improvement would be to better tuned hough transform and edge detection.
+
+Another potential improvement could be to calculate region and color mask range should be done automatically not manual. 
+
+<!-- To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md 
+
+<!--To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
+
+<!--
 Creating a Great Writeup
 ---
 For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
-
 1. Describe the pipeline
-
 2. Identify any shortcomings
-
 3. Suggest possible improvements
-
 We encourage using images in your writeup to demonstrate how your pipeline works.  
-
 All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
-
 You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
-
-
 The Project
 ---
-
 ## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
-
 **Step 1:** Set up the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) if you haven't already.
-
 **Step 2:** Open the code in a Jupyter Notebook
-
 You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out [Udacity's free course on Anaconda and Jupyter Notebooks](https://classroom.udacity.com/courses/ud1111) to get started.
-
 Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
-
-`> jupyter notebook`
-
+jupyter notebook`
 A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
-
 **Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
-
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
-
+-->
