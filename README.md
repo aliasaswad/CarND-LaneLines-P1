@@ -36,7 +36,7 @@ Below you could see how my pipeline manupilated the images from start to end;
 
 1- Convert original image to HSL and HSV
 
-<img src="project1_pipeline_images_examples/HSL.png"     width="480" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/HSL.png"     width="700" alt="Combined Image" align="middle" >
 
 2- Convert image to grayscale
 
