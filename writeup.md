@@ -45,7 +45,7 @@ Below you could see how my pipeline manupilated the images from start to end;
 
 2- Convert image to grayscale
 
-<img src="project1_pipeline_images_examples/gray.png"    width="800" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/gray.png"    width="900" alt="Combined Image" align="middle" >
 
 3- Apply Gaussian Blur to smoothen edges
 
