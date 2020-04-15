@@ -34,33 +34,40 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 Below you could see how my pipeline manupilated the images from start to end;
 
+
 1- Convert original image to HSL and HSV
 
 <img src="project1_pipeline_images_examples/HSL.png"     width="900" alt="Combined Image" align="middle" >
 
+
 2- Convert image to grayscale
 
-<img src="project1_pipeline_images_examples/gray.png"    width="800" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/gray.png"    width="500" alt="Combined Image" align="middle" >
+
 
 3- Apply Gaussian Blur to smoothen edges
 
-<img src="project1_pipeline_images_examples/gaussian.png"width="800" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/gaussian.png" width="500" alt="Combined Image" align="middle" >
+
 
 4- Apply Canny Edge Detection on smoothed gray image
 
-<img src="project1_pipeline_images_examples/canny.png"   width="800" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/canny.png"   width="500" alt="Combined Image" align="middle" >
+
 
 5- Find region of Interest
 
-<img src="project1_pipeline_images_examples/roi.png"     width="800" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/roi.png"     width="500" alt="Combined Image" align="middle" >
+
 
 6- Perform a Hough Transform
 
-<img src="project1_pipeline_images_examples/hough.png"   width="800" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/hough.png"   width="500" alt="Combined Image" align="middle" >
+
 
 7- Create two smooth lines
 
-<img src="project1_pipeline_images_examples/average.png" width="800" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/average.png" width="500" alt="Combined Image" align="middle" >
 
      
 ### 2. Potential shortcomings with the current pipeline
