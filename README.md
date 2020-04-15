@@ -37,7 +37,6 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 Below you could see how my pipeline manupilated the images from start to end;
 
 <img src="project1_pipeline_images_examples/HSL.png" width="380" alt="Combined Image" align="middle" >
-<!-- <img src="project1_pipeline_images_examples/HSV.png" width="380" alt="Combined Image" align="middle" > -->
 <img src="project1_pipeline_images_examples/gray.png" width="380" alt="Combined Image" align="middle" >
 <img src="project1_pipeline_images_examples/gaussian.png" width="380" alt="Combined Image" align="middle" >
 <img src="project1_pipeline_images_examples/canny.png" width="380" alt="Combined Image" align="middle" >
