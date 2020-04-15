@@ -49,7 +49,7 @@ Below you could see how my pipeline manupilated the images from start to end;
 
 3- Apply Gaussian Blur to smoothen edges
 
-<img src="project1_pipeline_images_examples/gaussian.png"width="800" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/gaussian.png" width="800" alt="Combined Image" align="middle" >
 
 4- Apply Canny Edge Detection on smoothed gray image
 
