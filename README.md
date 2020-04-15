@@ -36,20 +36,15 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 Below you could see how my pipeline manupilated the images from start to end;
 
-<img src="project1_pipeline_images_examples/HSL.png" width="480" alt="Combined Image" align="middle" >
-<img src="project1_pipeline_images_examples/gray.png" width="480" alt="Combined Image" align="middle" >
-<img src="project1_pipeline_images_examples/gaussian.png" width="480" alt="Combined Image" align="middle" >
-<img src="project1_pipeline_images_examples/canny.png" width="480" alt="Combined Image" align="middle" >
-<img src="project1_pipeline_images_examples/roi.png" width="480" alt="Combined Image" align="middle" > -->
-<img src="project1_pipeline_images_examples/hough.png" width="480" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/HSL.png"     width="480" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/gray.png"    width="480" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/gaussian.png"width="480" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/canny.png"   width="480" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/roi.png"     width="480" alt="Combined Image" align="middle" >
+<img src="project1_pipeline_images_examples/hough.png"   width="480" alt="Combined Image" align="middle" >
 <img src="project1_pipeline_images_examples/average.png" width="480" alt="Combined Image" align="middle" >
 
-<!-- <img src="project1_pipeline_images_examples/origin.png" width="380" alt="Combined Image" align="middle" > -->
-
-
-<!-- ![alt text][image1] -->
-
-
+     
 ### 2. Potential shortcomings with the current pipeline
 
 
