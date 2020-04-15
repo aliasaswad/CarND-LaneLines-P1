@@ -17,16 +17,14 @@ In this project you will detect lane lines in images using Python and OpenCV.  O
 My pipeline consisted of many steps statring from indentfy HSL color selection and end with ? as below:
 
 <ul>
-    <li>Convert our original image to HSL</li>
-    <li>Isolate yellow and white from HSL image</li>
-    <li>Bit-wise OR yellow and white masks to get common mask</li>
-    <li>Bit-wise AND mask with darkened image</li>
+    <li>Find HSL and HSV from original image to </li>
+    <li>Identify white and yellow color in the images</li>
     <li>Convert image to grayscale</li>
-    <li>Apply Gaussian Blur to smoothen edges</li>
-    <li>Apply Canny Edge Detection on smoothed gray image</li>
-    <li>Perform a Hough Transform to find lanes and trace them in red</li>
-    <li>Separate left and right lanes</li>
-    <li>Extrapolate them to create two smooth lines</li>
+    <li>Apply gaussian blur to smoothen edges</li>
+    <li>Apply canny edge detection on smoothed gray image</li>
+    <li>Find region of interest (ROI)</li>
+    <li>Perform a hough transform to find lanes and trace them in red</li>
+    <li>Find the average and the extrapolating lines to create two smooth lines</li>
 </ul>
 
 
@@ -36,11 +34,22 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 Below you could see how my pipeline manupilated the images from start to end;
 
+1- Convert original image to HSL and HSV
 <img src="project1_pipeline_images_examples/HSL.png"     width="480" alt="Combined Image" align="middle" >
+
+2- Convert image to grayscale
 <img src="project1_pipeline_images_examples/gray.png"    width="480" alt="Combined Image" align="middle" >
+
+3- Apply Gaussian Blur to smoothen edges
 <img src="project1_pipeline_images_examples/gaussian.png"width="480" alt="Combined Image" align="middle" >
+
+4- Apply Canny Edge Detection on smoothed gray image
 <img src="project1_pipeline_images_examples/canny.png"   width="480" alt="Combined Image" align="middle" >
+
+5- Find region of Interest
 <img src="project1_pipeline_images_examples/roi.png"     width="480" alt="Combined Image" align="middle" >
+
+6- Perform a Hough Transform
 <img src="project1_pipeline_images_examples/hough.png"   width="480" alt="Combined Image" align="middle" >
 <img src="project1_pipeline_images_examples/average.png" width="480" alt="Combined Image" align="middle" >
 

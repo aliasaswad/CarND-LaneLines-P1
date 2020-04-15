@@ -20,7 +20,7 @@ When we drive, we use our eyes to decide where to go.  The lines on the road tha
 My pipeline consisted of many steps statring from indentfy HSL color selection and end with ? as below:
 
 <ul>
-    <li>Convert our original image to HSL</li>
+    <li>Convert our original image to HSL and HSV</li>
     <li>Isolate yellow and white from HSL image</li>
     <li>Bit-wise OR yellow and white masks to get common mask</li>
     <li>Bit-wise AND mask with original image</li>
@@ -40,18 +40,12 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 Below you could see how my pipeline manupilated the images from start to end;
 
 <img src="project1_pipeline_images_examples/HSL.png" width="380" alt="Combined Image" align="middle" >
-<!-- <img src="project1_pipeline_images_examples/HSV.png" width="380" alt="Combined Image" align="middle" > -->
 <img src="project1_pipeline_images_examples/gray.png" width="380" alt="Combined Image" align="middle" >
 <img src="project1_pipeline_images_examples/gaussian.png" width="380" alt="Combined Image" align="middle" >
 <img src="project1_pipeline_images_examples/canny.png" width="380" alt="Combined Image" align="middle" >
 <img src="project1_pipeline_images_examples/roi.png" width="380" alt="Combined Image" align="middle" > -->
 <img src="project1_pipeline_images_examples/hough.png" width="380" alt="Combined Image" align="middle" >
 <img src="project1_pipeline_images_examples/average.png" width="380" alt="Combined Image" align="middle" >
-
-<!-- <img src="project1_pipeline_images_examples/origin.png" width="380" alt="Combined Image" align="middle" > -->
-
-
-<!-- ![alt text][image1] -->
 
 
 ### 2. Potential shortcomings with the current pipeline
